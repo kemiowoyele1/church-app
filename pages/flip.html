@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BOOK FLIP</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/flip.css">
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+ 
+  
+</head>
+<body>
+       
+<div class="container">
+
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="logo"></div>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html" class="home">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">locate us</a></li>
+            <li><a href="#">testimonies</a></li>
+            <li><a href="#">Join-us</a></li>
+            <li><a href="#" class="donate">Donate</a></li>
+        </ul>
+    </nav>
+     <div class="book">
+        <div id="cover"></div>
+        <div class="flip-book">
+            <div class="flip" id="p1"> 
+                <div class="back">
+                   <!-- <img src="../images/easter.jpg" alt="easter"> -->
+                   <label for="c1" class="back-btn">back</label>
+                </div>
+                <div class="front">
+                    <h2 id="title">crusade</h2>
+                    <p id="front-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus alias
+                         natus rerum quam fugiat, tenetur eos maxime. Exercitationem, quaerat animi!
+                         Quae sint ut laborum facere perspiciatis beatae dolorum maxime molestias?</p>
+                    <button class="next-btn">next</button>
+                        </div>
+                <div class="flip-cover"></div>
+           
+            </div>
+        </div>
+       </div> 
+        
+    <footer class="footer">
+        
+        <div class="service-time">
+            <h2>worship with us</h2>
+            <p>@ insert church address</p>
+            <div>
+                <p>Sundays: 8:30 am to 12pm</p>
+                <p>Tuesdays: 6:00pm to 7:00pm</p>
+                <p>Wednesday: 5:00pm - 7:00pm</p>
+            </div>
+
+        </div>
+         <div class="mail-us">
+            <form action="">
+                <h2>get in touch</h2>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email address">
+                <input type="text-area" name="message" id="message" placeholder="Message">
+                <button id="send-mail">send</button>
+            </form>
+        </div>
+        <div class="footer3">
+            <div class="church-units">
+                <h2>church units</h2>
+                <p>Kids fellowship</p>
+                <p>Youth fellowship</p>
+                <p>Choir ministry</p>
+                <p>Intercessory ministry</p>
+                <p>home cells</p>
+            </div>
+            <div class="social-handles">
+                <h2>follow us</h2>
+                <div class="instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5">
+                    </rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z">
+                    </path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </div>
+                <div class="facebook"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                     stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div>
+                <div class="youtube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="70" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube">
+                     <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+
+                    </path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </div>
+                <div class="twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                </div>
+
+            </div> 
+        </div>
+        <div class="copy-right">Copyright 2021. All Rights Reserved Kemi Owoyele.</div>
+    </footer>
+<div class="cookies">
+    <p>We use cookies to offer you a better experience and analyze traffic to this site. <br>
+        By continuing to use this website, <br> you consent to the use of cookies in accordance with our Privacy Policy.</p>
+        <button class="accept-cookies">accept and close</button>
+</div> 
+
+
+
+<div class="box">
+    <div style="text-align: center;" class="top">
+        <h1>Send A Message !</h1>
+    </div>
+    <div class="mid">
+        <div class="chat">
+            <!-- <h2>Answers Are Below</h2> -->
+            <p id="chatLog">Let's Chat</p>
+        </div>
+    </div>
+        <div class="input">
+        <input type="text" id="userBox"onkeydown="if(event.keyCode == 13){ talk() }"placeholder="Type A Message">
+        </div>
+        </div>
+    <button class="bot"></button>
+        </div>
+    
+
+    <script src="../js/gallery.js"></script>
+
+    <script src="../js/flip.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/chat.js"></script>
+</body>
+</html>

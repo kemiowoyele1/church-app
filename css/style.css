@@ -1,0 +1,359 @@
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #545454;
+    }
+    body{
+         max-width: 100vw;
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        width: 100vw;
+      }
+   h1, h2, h3, h4, h5, h6{
+    color: rgb(238, 118, 6);
+
+   }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(6, minmax(10vh, auto));
+        background-color: #faf8eb;
+        color: black;
+        width: 100vw;
+    }
+   
+    nav{
+        position: relative;
+        z-index: 2;
+        height: 10vh;
+        background-color: #faf8eb;
+        display: flex;
+        grid-row: 1/2;
+    }
+    .logo{
+        display: flex;
+        list-style: none;
+        width: 10%;
+        height: 90%;
+        margin: 5%;
+        background: url(../images/logo.png);
+        border-radius: 50%;
+        background-size: 100% 100%;
+        justify-self: left;
+        align-self: center;
+        border: 2px solid rgba(238, 118, 6);
+        box-shadow: 2px 2px #faf8eb, -2px -2px #faf8eb, 0 0 4px #353533 ;
+    }
+    .nav-links{
+        display: flex;
+        list-style: none;
+        width: 50%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: auto;
+        padding: 0 5px;
+     }
+
+     .nav-links li a{
+        color: rgb(238, 118, 6);
+        text-decoration: none;
+        font: 16px;
+        font-weight: 700;
+        padding: 12px;
+    }
+    .nav-links li .home{
+        background-color: rgb(238, 118, 6);
+        color: #faf8eb;
+        border-radius: 40%;
+      
+    }
+    .nav-links li .donate{
+        background-color: rgb(238, 118, 6);
+        color: #faf8eb;
+        border-radius: 40%;
+      
+    } */
+     nav{
+          position: relative;
+      }
+      .main{
+        height: 80vh;
+        border-bottom: 2px solid red;
+        background: black;
+        background-size: 100% 100%;
+      }
+    
+    .main-container{
+        display: grid;
+        grid-template-rows: 2fr 2fr 1fr;
+        color: #fff;
+        /* z-index: 10; */
+        font-weight: bold;
+        font-size: 70px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        -webkit-text-stroke: 2px rgba(238, 118, 6);
+        text-stroke: 2px rgba(238, 118, 6);
+    }
+    .v-header{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100vw;
+        height: 80vh;
+        overflow:hidden;
+    
+    }
+    .time-keeper{
+        position: absolute;
+        top: 0%;
+        right: 2%;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        background-color: #faf8eb;
+        overflow:hidden;
+        color: black;
+        font-weight: 100;
+        font-size: 12px;
+        -webkit-text-stroke: 0px rgba(238, 118, 6);
+        /* z-index: 10; */
+    }
+    .main-container .section1{
+        align-self: flex-end;
+        animation: section1 1s ease-in-out ;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+    .main-container .section2{
+       align-self: flex-start;
+        animation: section2 1s ease-in-out;
+        animation-delay: 1s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    
+    }
+    .main-container .section3{
+       align-self: flex-start;
+        animation: section2 1s ease-in-out;
+        animation-delay: 0s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 0px rgba(238, 118, 6);
+      padding:0 20px;
+    }
+    @keyframes section1{
+        0%{
+          transform: translate(0%, -100%);
+          
+        }
+        100%{
+            transform: translate(0%, 0%);
+            opacity: 1;
+          }
+    }
+    @keyframes section2{
+        0%{
+          transform: translate(0%, 100%);
+        }
+        100%{
+            transform: translate(0%, 0%);
+            opacity: 1;
+     }
+    }
+    video{
+        width: 100vw;
+    }
+    .fullscreen-video-wrap{
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100vw;
+        height: 80vh;
+        overflow:hidden;
+    }
+    
+    .fullscreen-video-wrap{
+        min-width: 100vw;
+        min-height: 80vh;
+    }
+    
+    .header-overlay{
+        height: 80vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background:#b14e3a;
+        z-index: 1;
+        opacity: 0.3;
+        background-image: url('../images/sea.jpg');
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        
+    
+    }
+    .section{
+        height: 10vh;
+        background-color: #faf8eb;
+        /* box-shadow: 0 0 3px rgba(90, 27, 2, 0.315); */
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-gap: 10px;
+        width: 100vw;
+     
+    }
+    
+    
+    .section .join1{
+        background-color: rgba(238, 118, 6);
+         color: #faf8eb;
+         justify-content: end;
+         align-items: center;
+         display: grid;
+         font-size: 30px;
+         font-weight: bold;
+         padding-right: 30px;
+     }
+     .section .join2{
+         color: rgba(238, 118, 6);
+         justify-content: space-around;
+         align-items: center;
+         display: grid;
+         font-size: 30px;
+         font-weight: bold;
+         padding-left: 30px;
+     }
+     
+ .about{
+    height: fit-content;
+    background-color: #faf8eb;
+    box-shadow: 0 0 3px rgba(90, 27, 2, 0.562);
+    display: grid;
+    grid-template-rows: repeat(6, minmax(30vh, auto));
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-gap: 10px;
+    width: 100vw;
+    padding: 50px;
+    
+ }
+ .about-us{
+     grid-row: 1/3;
+     grid-column: 1/3;
+ }
+ .our-mission{
+     grid-row: 1/3;
+     grid-column: 3/5;
+ }
+ .outreach{
+     grid-row: 1/3;
+     grid-column: 5/7;
+ }
+ .about div{
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: repeat(10, 10%);
+    box-shadow: 2px 2px 5px rgba(56, 27, 10, 0.712);
+ }
+ .about div .image {
+      grid-row: 1/9;
+     grid-column: 1/11;
+    background-image: url(../images/logo.png);
+    background-size: 100% 100%;
+ }
+ 
+ .about div .image-dis {
+    grid-row: 9/11;
+   grid-column: 1/11;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: none;
+  grid-template-columns: none;
+}
+.image-dis a {
+   color: rgba(238, 118, 6);
+  text-decoration: none;
+ text-align: center;
+ border: 1px solid rgba(238, 118, 6);
+padding: 8px;
+border-radius: 8%;
+font-weight: 700;
+}
+.about .senior-pastor{
+    grid-row: 3/5;
+    grid-column: 2/6;
+    height: 75vh;
+  
+}
+.about  .pastor1, .pastor2, .pastor3{
+    grid-row: 5/7;
+ }
+.about  .pastor1{
+    grid-column: 1/3;
+}
+.about  .pastor2{
+    grid-column: 3/5;
+}
+.about  .pastor3{
+    grid-column: 5/7;
+}
+.about .pastors .image{
+    background-image: url(../images/pastor.jpg);
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+
+.about .pastor1 .image{
+    background-image: url(../images/p2.jpg);
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+.about .pastor2 .image{
+    background-image: url(../images/pastor1.jpg);
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+.about .pastor3 .image{
+    background-image: url(../images/go.jpg);
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+.about .about-us .image{
+    background-image: url(../images/church.jpg);
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+.about .our-mission .image{
+    background-image: url(../images/praying.jpg);
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+
+.about .outreach .image{
+    background-image: url(../images/crusade.jpg);
+    background-size: 100% 100%;
+    box-shadow: none;
+}
+.about .pastors .image-dis{
+     box-shadow: none;
+}
+.about .pastors{
+   padding: 20px;
+}
