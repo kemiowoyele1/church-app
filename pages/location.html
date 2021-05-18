@@ -3,79 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thank you for the message page</title>
+    <title>location tracker with mapbox</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/flip.css">
     <link rel="stylesheet" href="../css/chat.css">
     <link rel="stylesheet" href="../css/mobile.css">
  
-  <style>
-      main{
-          grid-row: 2/6;
-          height: 70vh;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          display: grid;
-          background-color: rgba(238, 118, 6, 0.616);
-          background-image: url(../images/01.png);
-          background-size: 100% 100%;
-      
-        }
-        .thanks-box a{
-            text-decoration: none;
-            color: #faf8eb;
-  
-        }
-       .thanks-box  h1{
-            font-size: 50px;
-            font-weight: bold;
-        }
-       .thanks-box  p{
-            font-size: 25px;
-            font-weight: bold;
-        color: #3f2821;
-  
-        }
-     .thanks-box  button{
-    bottom: 13px;
-    right: 13px;
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: 900;
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+<style>
+#map{
+    width:100vw;
+    height:90vh;
     background-color: rgb(238, 118, 6);
-    padding: 5px 20px;
-    border: 2px ridge #faf8eb;
-    box-shadow: inset 2px 2px 5px #faf8eb,
-                inset -2px -2px 5px #faf8eb,
-                inset 0 0 10px #462c14,
-                0 0 5px #382009;
-    border-radius: 30px;
-    color:  #faf8eb;
+    grid-row: 2/6;
 }
-.thanks-box{
-    height: 60vh;
-    width: 60vw;
-    background-color:  #faf8eb;
-    border: 2px ridge #faf8eb;
-    box-shadow: inset 2px 2px 5px #faf8eb,
-                inset -2px -2px 5px #faf8eb,
-                inset 0 0 10px #462c14,
-                0 0 5px #382009;
-    border-radius: 30px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-       
-}
-  </style>
+
+</style>
 </head>
 <body>
-       
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+      
 <div class="container">
 
     <nav>
@@ -88,21 +39,15 @@
         
         <ul class="nav-links">
             <li><a href="../index.html" class="home">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">locate us</a></li>
+            <li><a href="../pages/flip.html">Gallery</a></li>
+            <li><a href="../pages/location.html">locate us</a></li>
             <li><a href="#">testimonies</a></li>
-            <li><a href="#">Join-us</a></li>
+            <li><a href="../pages/login.html">Join-us</a></li>
             <li><a href="#" class="donate">Donate</a></li>
         </ul>
     </nav>
-   <main>
-       <div class="thanks-box">
-        <h1>Thank You!</h1>
-        <p>You submission is received and we will contact you soon.</p>
-        <a href="../index.html"> <button> back to home </button></a>
-       </div>
-   </main>
-        
+    <div id='map'></div>
+
     <footer class="footer">
         
         <div class="service-time">
@@ -160,15 +105,32 @@
         </div>
         <div class="copy-right">Copyright 2021. All Rights Reserved Kemi Owoyele.</div>
     </footer>
+<div class="cookies">
+    <p>We use cookies to offer you a better experience and analyze traffic to this site. <br>
+        By continuing to use this website, <br> you consent to the use of cookies in accordance with our Privacy Policy.</p>
+        <button class="accept-cookies">accept and close</button>
+</div> 
 
 
 
-
-
-    <script src="../js/gallery.js"></script>
-
-    <script src="../js/flip.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="../js/chat.js"></script>
+<div class="box">
+    <div style="text-align: center;" class="top">
+        <h1>Send A Message !</h1>
+    </div>
+    <div class="mid">
+        <div class="chat">
+            <!-- <h2>Answers Are Below</h2> -->
+            <p id="chatLog">Let's Chat</p>
+        </div>
+    </div>
+        <div class="input">
+        <input type="text" id="userBox"onkeydown="if(event.keyCode == 13){ talk() }"placeholder="Type A Message">
+        </div>
+        </div>
+    <button class="bot"></button>
+        </div>
+ 
+<script src="../js/map.js"></script>
+ 
 </body>
 </html>

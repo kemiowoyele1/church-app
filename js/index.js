@@ -10,15 +10,9 @@
         const date1 = document.querySelector(".time-keeper");
         let cookiesInterval;
        
-       cookiesInterval = setInterval(() => {
-           cookies1.style.display = "grid"
-       }, 2000)
-       acceptCookies.addEventListener("click", () => {
-           clearInterval(cookiesInterval);
-           cookies1.style.display = "none"
-      
-       })
+       
         hamburgers.addEventListener('click', () => {
+        
             navLinks.classList.toggle("nav-link-open");
             links.forEach(link => {
                 link.classList.toggle('fade');
@@ -52,4 +46,12 @@
     
     }
     displayDate();
-    
+    cookiesInterval = setInterval(() => {
+        cookies1.style.display = "grid";
+     
+    }, 2000)
+    acceptCookies.addEventListener("click", () => {
+        clearInterval(cookiesInterval);
+        cookies1.style.display = "none"
+   
+    })

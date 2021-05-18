@@ -1,0 +1,23 @@
+{
+  "name": "church-app",
+  "version": "1.0.0",
+  "description": "church web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kemiowoyele1/church-app.git"
+  },
+  "author": "kemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kemiowoyele1/church-app/issues"
+  },
+  "homepage": "https://github.com/kemiowoyele1/church-app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thank you for the message page</title>
+    <title>log in page</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/flip.css">
-    <link rel="stylesheet" href="../css/chat.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+   <link rel="stylesheet" href="../css/mobile.css">
  
   <style>
       main{
           grid-row: 2/6;
-          height: 70vh;
+          height: 90vh;
           align-items: center;
           justify-content: center;
           text-align: center;
@@ -21,24 +19,60 @@
           background-color: rgba(238, 118, 6, 0.616);
           background-image: url(../images/01.png);
           background-size: 100% 100%;
-      
         }
-        .thanks-box a{
+        .sign-box a{
             text-decoration: none;
-            color: #faf8eb;
-  
+            color: rgb(238, 118, 6);
         }
-       .thanks-box  h1{
+        
+       .sign-box  h1{
             font-size: 50px;
-            font-weight: bold;
+            font-weight: bolder;
+            text-align: left;
+            position: absolute;
+            top: 2%;
+            left: 5%;
+           color:  rgb(238, 118, 6);
+            filter: drop-shadow(1px 1px 2px #3f2821);
+            -webkit-text-stroke: 0.5px #fafad7;
         }
-       .thanks-box  p{
-            font-size: 25px;
+       .sign-box  p{
+            font-size: 15px;
             font-weight: bold;
         color: #3f2821;
   
         }
-     .thanks-box  button{
+        form{
+            position: relative;
+            width: inherit;
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            padding: 5px;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        form .input{
+            width: 45vw;
+            display: block;
+            margin-bottom: 15px;
+            border: 2px ridge #faf8eb;
+            box-shadow: inset 2px 2px 5px #faf8eb,
+                         inset -2px -2px 5px #faf8eb,
+                         inset 0 0 10px #462c14,
+                         0 0 5px #382009;
+            border-radius: 30px;
+            padding: 10px 30px;
+
+        }
+        .input::placeholder{
+            font-size: 20px;
+            color: rgb(238, 118, 6);
+        }
+        .submit-container{
+            grid-template-columns: 1fr 1fr 1fr;
+            display: grid;
+        }
+     .sign-box  button{
     bottom: 13px;
     right: 13px;
     cursor: pointer;
@@ -53,10 +87,11 @@
                 0 0 5px #382009;
     border-radius: 30px;
     color:  #faf8eb;
+    grid-column: 3/4;
 }
-.thanks-box{
-    height: 60vh;
-    width: 60vw;
+.sign-box{
+    height: 70vh;
+    width: 50vw;
     background-color:  #faf8eb;
     border: 2px ridge #faf8eb;
     box-shadow: inset 2px 2px 5px #faf8eb,
@@ -65,12 +100,67 @@
                 0 0 5px #382009;
     border-radius: 30px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
     padding: 20px;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
+}
+.remember-container{
+     text-align: left;
+   
+}
+
+@media screen and (max-width: 1000px)  {
+    main{
+          grid-row: 2/6;
+          height: fit-content;
+          }
        
+       .sign-box  h1{
+            font-size: 35px;
+           }
+       .sign-box  p{
+            font-size: 15px;
+            font-weight: bold;
+        color: #3f2821;
+  
+        }
+        
+        form .input{
+            width: 70vw;
+           
+
+        }
+        .submit-container{
+            grid-template-columns: 1fr 1fr 1fr;
+            display: grid;
+        }
+     .sign-box  button{
+    bottom: 13px;
+    right: 13px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 900;
+    background-color: rgb(238, 118, 6);
+    padding: 5px 20px;
+    border: 2px ridge #faf8eb;
+    box-shadow: inset 2px 2px 5px #faf8eb,
+                inset -2px -2px 5px #faf8eb,
+                inset 0 0 10px #462c14,
+                0 0 5px #382009;
+    border-radius: 30px;
+    color:  #faf8eb;
+    grid-column: 3/4;
+}
+.sign-box{
+    height: 70vh;
+    width: 80vw;
+   grid-template-rows: repeat(3, minmax(100px auto));
+    padding: 20px;
+    margin: 15vh auto;
+  }
 }
   </style>
 </head>
@@ -95,14 +185,35 @@
             <li><a href="#" class="donate">Donate</a></li>
         </ul>
     </nav>
+
+
    <main>
-       <div class="thanks-box">
-        <h1>Thank You!</h1>
-        <p>You submission is received and we will contact you soon.</p>
-        <a href="../index.html"> <button> back to home </button></a>
-       </div>
+       <div class="sign-box">
+            <div class="sign">
+                <h1>Sign In</h1>
+               </div> 
+            <form action="">
+                <input type="email" placeholder="email address" class="input">
+                <input type="password" placeholder="password" class="input">
+                <div class="submit-container">
+                        <div class="remember-container">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember">Remember Me</label> 
+                         
+                        </div>
+                        <button type="submit">Login</button>
+                     
+                </div>
+              
+            </form>
+            <div class="other-options">
+                <p>dont have an account?  <a href="#">sign up</a></p>
+                <p></p><a href="#"> forgot password </a></p>
+              </div>
+        </div>
    </main>
         
+
     <footer class="footer">
         
         <div class="service-time">
@@ -165,10 +276,7 @@
 
 
 
-    <script src="../js/gallery.js"></script>
-
-    <script src="../js/flip.js"></script>
     <script src="../js/index.js"></script>
-    <script src="../js/chat.js"></script>
+
 </body>
 </html>
