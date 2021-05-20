@@ -55,3 +55,10 @@
         cookies1.style.display = "none"
    
     })
+
+    fetch('http://localhost:3000/posts')
+    .then(result => {
+        console.log(result);
+    }) .catch (err => {
+        console.log(err)
+    })
