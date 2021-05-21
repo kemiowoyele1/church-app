@@ -56,7 +56,7 @@
    
     })
 
-    fetch('http://localhost:3000/posts')
+    fetch('https://testimonies-api.herokuapp.com/')
     .then(result => {
         console.log(result);
     }) .catch (err => {
